@@ -3,5 +3,4 @@
 ]
 interface Calculator {
     int Add([in] int a, [in] int b);
-	char* GetInformationServer([in] char* index);
 };

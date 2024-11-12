@@ -30,8 +30,8 @@
 #include <string.h>
 #include "Calculator_h.h"
 
-#define TYPE_FORMAT_STRING_SIZE   11                                
-#define PROC_FORMAT_STRING_SIZE   91                                
+#define TYPE_FORMAT_STRING_SIZE   3                                 
+#define PROC_FORMAT_STRING_SIZE   49                                
 #define EXPR_FORMAT_STRING_SIZE   1                                 
 #define TRANSMIT_AS_TABLE_SIZE    0            
 #define WIRE_MARSHAL_TABLE_SIZE   0            
@@ -202,40 +202,6 @@ static const Calculator_MIDL_PROC_FORMAT_STRING Calculator__MIDL_ProcFormatStrin
 /* 46 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
 
-	/* Procedure GetInformationServer */
-
-/* 48 */	0x0,		/* 0 */
-			0x48,		/* Old Flags:  */
-/* 50 */	NdrFcLong( 0x0 ),	/* 0 */
-/* 54 */	NdrFcShort( 0x1 ),	/* 1 */
-/* 56 */	NdrFcShort( 0x18 ),	/* X64 Stack size/offset = 24 */
-/* 58 */	0x32,		/* FC_BIND_PRIMITIVE */
-			0x0,		/* 0 */
-/* 60 */	NdrFcShort( 0x0 ),	/* X64 Stack size/offset = 0 */
-/* 62 */	NdrFcShort( 0x19 ),	/* 25 */
-/* 64 */	NdrFcShort( 0x19 ),	/* 25 */
-/* 66 */	0x44,		/* Oi2 Flags:  has return, has ext, */
-			0x2,		/* 2 */
-/* 68 */	0xa,		/* 10 */
-			0x1,		/* Ext Flags:  new corr desc, */
-/* 70 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 72 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 74 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 76 */	NdrFcShort( 0x0 ),	/* 0 */
-
-	/* Parameter index */
-
-/* 78 */	NdrFcShort( 0x148 ),	/* Flags:  in, base type, simple ref, */
-/* 80 */	NdrFcShort( 0x8 ),	/* X64 Stack size/offset = 8 */
-/* 82 */	0x2,		/* FC_CHAR */
-			0x0,		/* 0 */
-
-	/* Return value */
-
-/* 84 */	NdrFcShort( 0x32 ),	/* Flags:  must free, out, return, */
-/* 86 */	NdrFcShort( 0x10 ),	/* X64 Stack size/offset = 16 */
-/* 88 */	NdrFcShort( 0x6 ),	/* Type Offset=6 */
-
 			0x0
         }
     };
@@ -245,14 +211,6 @@ static const Calculator_MIDL_TYPE_FORMAT_STRING Calculator__MIDL_TypeFormatStrin
         0,
         {
 			NdrFcShort( 0x0 ),	/* 0 */
-/*  2 */	
-			0x11, 0x8,	/* FC_RP [simple_pointer] */
-/*  4 */	0x2,		/* FC_CHAR */
-			0x5c,		/* FC_PAD */
-/*  6 */	
-			0x12, 0x8,	/* FC_UP [simple_pointer] */
-/*  8 */	0x2,		/* FC_CHAR */
-			0x5c,		/* FC_PAD */
 
 			0x0
         }
@@ -260,20 +218,18 @@ static const Calculator_MIDL_TYPE_FORMAT_STRING Calculator__MIDL_TypeFormatStrin
 
 static const unsigned short Calculator_FormatStringOffsetTable[] =
     {
-    0,
-    48
+    0
     };
 
 
 static const RPC_DISPATCH_FUNCTION Calculator_table[] =
     {
     NdrServerCall2,
-    NdrServerCall2,
     0
     };
 static const RPC_DISPATCH_TABLE Calculator_v0_0_DispatchTable = 
     {
-    2,
+    1,
     (RPC_DISPATCH_FUNCTION*)Calculator_table
     };
 
@@ -317,32 +273,6 @@ namespace {
 
 typedef 
 NDR64_FORMAT_CHAR
-__midl_frag10_t;
-extern const __midl_frag10_t __midl_frag10;
-
-typedef 
-struct _NDR64_POINTER_FORMAT
-__midl_frag9_t;
-extern const __midl_frag9_t __midl_frag9;
-
-typedef 
-struct _NDR64_POINTER_FORMAT
-__midl_frag7_t;
-extern const __midl_frag7_t __midl_frag7;
-
-typedef 
-struct 
-{
-    struct _NDR64_PROC_FORMAT frag1;
-    struct _NDR64_BIND_AND_NOTIFY_EXTENSION frag2;
-    struct _NDR64_PARAM_FORMAT frag3;
-    struct _NDR64_PARAM_FORMAT frag4;
-}
-__midl_frag6_t;
-extern const __midl_frag6_t __midl_frag6;
-
-typedef 
-NDR64_FORMAT_CHAR
 __midl_frag5_t;
 extern const __midl_frag5_t __midl_frag5;
 
@@ -362,103 +292,6 @@ typedef
 NDR64_FORMAT_UINT32
 __midl_frag1_t;
 extern const __midl_frag1_t __midl_frag1;
-
-static const __midl_frag10_t __midl_frag10 =
-0x10    /* FC64_CHAR */;
-
-static const __midl_frag9_t __midl_frag9 =
-{ 
-/* *char */
-    0x21,    /* FC64_UP */
-    (NDR64_UINT8) 8 /* 0x8 */,
-    (NDR64_UINT16) 0 /* 0x0 */,
-    &__midl_frag10
-};
-
-static const __midl_frag7_t __midl_frag7 =
-{ 
-/* *char */
-    0x20,    /* FC64_RP */
-    (NDR64_UINT8) 8 /* 0x8 */,
-    (NDR64_UINT16) 0 /* 0x0 */,
-    &__midl_frag10
-};
-
-static const __midl_frag6_t __midl_frag6 =
-{ 
-/* GetInformationServer */
-    { 
-    /* GetInformationServer */      /* procedure GetInformationServer */
-        (NDR64_UINT32) 17301568 /* 0x1080040 */,    /* explicit handle */ /* IsIntrepreted, HasReturn, HasExtensions */
-        (NDR64_UINT32) 24 /* 0x18 */ ,  /* Stack size */
-        (NDR64_UINT32) 29 /* 0x1d */,
-        (NDR64_UINT32) 29 /* 0x1d */,
-        (NDR64_UINT16) 0 /* 0x0 */,
-        (NDR64_UINT16) 0 /* 0x0 */,
-        (NDR64_UINT16) 2 /* 0x2 */,
-        (NDR64_UINT16) 8 /* 0x8 */
-    },
-    { 
-    /* struct _NDR64_BIND_AND_NOTIFY_EXTENSION */
-        { 
-        /* struct _NDR64_BIND_AND_NOTIFY_EXTENSION */
-            0x72,    /* FC64_BIND_PRIMITIVE */
-            (NDR64_UINT8) 0 /* 0x0 */,
-            0 /* 0x0 */,   /* Stack offset */
-            (NDR64_UINT8) 0 /* 0x0 */,
-            (NDR64_UINT8) 0 /* 0x0 */
-        },
-        (NDR64_UINT16) 0 /* 0x0 */      /* Notify index */
-    },
-    { 
-    /* index */      /* parameter index */
-        &__midl_frag10,
-        { 
-        /* index */
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            (NDR64_UINT16) 0 /* 0x0 */,
-            0
-        },    /* [in], Basetype, SimpleRef */
-        (NDR64_UINT16) 0 /* 0x0 */,
-        8 /* 0x8 */,   /* Stack offset */
-    },
-    { 
-    /* struct _NDR64_PARAM_FORMAT */      /* parameter  */
-        &__midl_frag9,
-        { 
-        /* struct _NDR64_PARAM_FORMAT */
-            0,
-            1,
-            0,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            (NDR64_UINT16) 0 /* 0x0 */,
-            0
-        },    /* MustFree, [out], IsReturn */
-        (NDR64_UINT16) 0 /* 0x0 */,
-        16 /* 0x10 */,   /* Stack offset */
-    }
-};
 
 static const __midl_frag5_t __midl_frag5 =
 0x5    /* FC64_INT32 */;
@@ -575,8 +408,7 @@ static const __midl_frag1_t __midl_frag1 =
 
 static const FormatInfoRef Calculator_Ndr64ProcTable[] =
     {
-    &__midl_frag2,
-    &__midl_frag6
+    &__midl_frag2
     };
 
 
@@ -613,12 +445,11 @@ static const MIDL_STUB_DESC Calculator_StubDesc =
 static const RPC_DISPATCH_FUNCTION Calculator_NDR64__table[] =
     {
     NdrServerCallAll,
-    NdrServerCallAll,
     0
     };
 static const RPC_DISPATCH_TABLE Calculator_NDR64__v0_0_DispatchTable = 
     {
-    2,
+    1,
     (RPC_DISPATCH_FUNCTION*)Calculator_NDR64__table
     };
 
@@ -649,8 +480,7 @@ static const MIDL_SYNTAX_INFO Calculator_SyntaxInfo [  2 ] =
 
 static const SERVER_ROUTINE Calculator_ServerRoutineTable[] = 
     {
-    (SERVER_ROUTINE)Add,
-    (SERVER_ROUTINE)GetInformationServer
+    (SERVER_ROUTINE)Add
     };
 
 static const MIDL_SERVER_INFO Calculator_ServerInfo = 

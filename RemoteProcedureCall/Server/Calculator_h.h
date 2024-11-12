@@ -64,10 +64,6 @@ int Add(
     /* [in] */ int a,
     /* [in] */ int b);
 
-unsigned char *GetInformationServer( 
-    /* [in] */ handle_t IDL_handle,
-    /* [in] */ unsigned char *index);
-
 
 
 extern RPC_IF_HANDLE Calculator_v0_0_c_ifspec;

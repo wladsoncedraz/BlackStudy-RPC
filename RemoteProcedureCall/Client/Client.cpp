@@ -5,7 +5,7 @@
 #include <Windows.h>
 #include <stdio.h>
 #include <assert.h>
-#include "..\Server\Calculator_h.h"
+#include "Calculator_h.h"
 
 #pragma comment(lib, "rpcrt4") // Links the rpcrt4 library for RPC functions
 
@@ -23,11 +23,6 @@ int main()
 	printf("[Client] Calling the Add function from the Server...");
     int result = Add(handle, 5, 7);
 	printf("[Client] Result: %d\n", result);
-
-	printf("[Client] Calling the GetInformationPerfectWorld function from the Server...");
-	unsigned char* messageToSend = (unsigned char*)"[CMD] Ligar servidor!";
-	unsigned char* messageBack = GetInformationServer(handle, messageToSend);
-	printf("[Client] ResultFromServer: %s\n", messageBack);
 }
 
 void* midl_user_allocate(size_t size)
