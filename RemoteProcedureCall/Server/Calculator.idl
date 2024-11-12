@@ -1,0 +1,7 @@
+[
+    uuid(F0DAB79F-3E70-4CA4-AAF2-28066F1A2F3E)
+]
+interface Calculator {
+    int Add([in] int a, [in] int b);
+	char* GetInformationServer([in] char* index);
+};
